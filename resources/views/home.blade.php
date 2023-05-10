@@ -301,28 +301,28 @@
       var group2 = document.getElementById("group2");
       if (group2) {
         group2.addEventListener("click", function (e) {
-          window.location.href = "./ThanhTon.html";
+          window.location.href = "/checkout";
         });
       }
       
       var tagsContainer = document.getElementById("tagsContainer");
       if (tagsContainer) {
         tagsContainer.addEventListener("click", function (e) {
-          window.location.href = "TrangCh.html";
+          window.location.href = "/home";
         });
       }
       
       var tagsContainer1 = document.getElementById("tagsContainer1");
       if (tagsContainer1) {
         tagsContainer1.addEventListener("click", function (e) {
-          window.location.href = "./SKin1.html";
+          window.location.href = "/event";
         });
       }
       
       var tagsContainer2 = document.getElementById("tagsContainer2");
       if (tagsContainer2) {
         tagsContainer2.addEventListener("click", function (e) {
-          window.location.href = "./ContactUs.html";
+          window.location.href = "/contact";
         });
       }
       </script>
