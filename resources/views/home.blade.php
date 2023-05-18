@@ -167,34 +167,30 @@
           src="{{asset('frontend/img/lisa-arnold-lay-do-f2-3@2x.png')}}"
         />
       </div>
-      <div class="navigation">
-        <img class="navigation-child" alt="" src="{{asset('frontend/img/vector-2.svg')}}" />
-
-        <div class="group-div">
-          <div class="tags-parent">
-            <div class="tags" id="tagsContainer">
-              <b class="sample-text">Trang chủ</b>
+      <div class="navigation2">
+        <img class="navigation-inner" alt="" src="{{ asset('frontend/img/vector-2.svg')}}" />
+  
+        <div class="frame-parent11">
+          <div class="tags-container">
+            <div class="tags7">
+              <b class="s-kin-13">Trang chủ</b>
             </div>
-            <div class="tags1" id="tagsContainer1">
-              <b class="sample-text">Sự kiện</b>
+            <div class="tags6" id="tagsContainer1">
+              <b class="s-kin-13">Sự kiện</b>
             </div>
-            <div class="tags1" id="tagsContainer2">
-              <b class="sample-text">Liên hệ</b>
+            <div class="tags6" id="tagsContainer2">
+              <b class="s-kin-13">Liên hệ</b>
             </div>
           </div>
-          <div class="group-group">
-            <img class="group-icon4" alt="" src="{{asset('frontend/img/group4.svg')}}" />
-
-            <b class="sample-text">0123456789</b>
+          <div class="group-parent6">
+            <img class="group-icon14" alt="" src="{{ asset('frontend/img/group4.svg')}}" />
+  
+            <b class="s-kin-13">0123456789</b>
           </div>
         </div>
-        <img
-          class="little-little-logo-ngang-1"
-          alt=""
-          src="{{asset('frontend/img/little--little-logo-ngang-1@2x.png')}}"
-        />
+        <img class="little-little-logo-ngang-12" alt=""
+          src="{{ asset('frontend/img/little--little-logo-ngang-1@2x.png')}}" />
       </div>
-    </div>
 
     <div id="calendarContainer" class="popup-overlay" style="display: none">
       <div class="calendar">
@@ -302,13 +298,6 @@
       if (group2) {
         group2.addEventListener("click", function (e) {
           window.location.href = "/checkout";
-        });
-      }
-      
-      var tagsContainer = document.getElementById("tagsContainer");
-      if (tagsContainer) {
-        tagsContainer.addEventListener("click", function (e) {
-          window.location.href = "/home";
         });
       }
       

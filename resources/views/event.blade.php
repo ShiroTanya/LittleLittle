@@ -40,51 +40,38 @@
 
         <div class="s-kin-ni">Sự kiện nổi bật</div>
 
-        
+        <div class="s-kin-11">
         @foreach($all_event as $key =>$event)
-        <div class="row">
-          <div class="col-sm-4">
-
-            <div class="s-kin-11">
-              <div class="s-kin-12">
-                <img class="s-kin-1-child" alt="" src="{{$event->event_img}}" />
-                <form>
-                  @csrf
-
-                  <div class="group-parent2">
-                    <div class="frame-wrapper">
-                      <div class="frame-parent7">
-                        <div class="s-kin-1-parent">
-                          <b class="s-kin-13">{{$event->event_name}}</b>
-                          <div class="m-sen-park1">{{$event->event_desc}}</div>
-                        </div>
-                        <div class="time1">
-                          <img class="icons-calendar1" alt="" src="{{ asset('frontend/img/icons--calendar.svg')}}" />
-
-                          <div class="div1">{{$event->date_start}} - {{$event->date_end}}</div>
-                        </div>
-                      </div>
+        <div class="s-kin-12">
+        <img class="s-kin-1-child" alt="" src="{{$event->event_img}}" />
+        <div class="group-parent2">
+            <div class="frame-wrapper">
+                <div class="frame-parent7">
+                    <div class="s-kin-1-parent">
+                        <b class="s-kin-13">{{ $event->event_name }}</b>
+                        <div class="m-sen-park1">{{ $event->event_desc }}</div>
                     </div>
-                    <b class="vn1">{{number_format($event->ticket_price,0,',','.')}}VNĐ</b>
-                    <a href="{{URL::to('/details-event/'.$event->event_slug)}}">
-                      <div class="btn-xem-chi-tit" id="btnXemChiTit">
-                        <div class="xem-chi-tit">Xem chi tiết</div>
-                        <div class="xem-chi-tit-btn">
-                          <img class="group-icon10" alt="" src="{{ asset('frontend/img/group9.svg')}}" />
-
-
-                          <div class="xem-chi-tit1">Xem chi tiết</div>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                </form>
-              </div>
+                    <div class="time1">
+                      <img class="icons-calendar1" alt="" src="{{ asset('frontend/img/icons--calendar.svg')}}" />
+                        <div class="div36">{{$event->date_start}} đến {{$event->date_end}}</div>
+                    </div>
+                </div>
             </div>
+            <b class="vn1">{{ number_format($event->ticket_price, 0, ',', '.') }} VNĐ</b>
+            <a href="{{URL::to('/details-event/'.$event->event_slug)}}">
+              <div class="btn-xem-chi-tit" id="btnXemChiTit" data-slug="{{ $event->event_slug }}">
+                  <div class="xem-chi-tit">Xem chi tiết</div>
+                  <div class="xem-chi-tit-btn">
+                  <img class="group-icon10" alt="" src="{{ asset('frontend/img/group9.svg')}}" />
+                      <div class="xem-chi-tit1">Xem chi tiết</div>
+                  </div>
+              </div></a>
 
-          </div>
         </div>
-        @endforeach
+    </div>            
+            @endforeach
+            
+          </div>
 
 
         <img class="previous-btn-icon" alt="" src="{{ asset('frontend/img/previous-btn.svg')}}" />
@@ -124,13 +111,7 @@
   </div>
 
   <script>
-    // var btnXemChiTit = document.getElementById("btnXemChiTit");
-    //   if (btnXemChiTit) {
-    //     btnXemChiTit.addEventListener("click", function (e) {
-    //       window.location.href = "/details-event";
-    //     });
-    //   }
-      
+
       var tagsContainer = document.getElementById("tagsContainer");
       if (tagsContainer) {
         tagsContainer.addEventListener("click", function (e) {

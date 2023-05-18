@@ -16,6 +16,4 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
-Route::get('/details-event', function () {
-    return view('details_event');
-});
+Route::get('/details-event/{event_slug}',[EventController::class, 'details_event']);
