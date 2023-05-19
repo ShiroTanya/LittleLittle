@@ -70,45 +70,33 @@
 
           <img class="vector-icon" alt="" src="{{asset('frontend/img/vector.svg')}}" />
 
-          <div class="frame-group">
-            <div class="gi-gia-nh-wrapper">
-              <div class="gi-gia-nh">Gói gia đình</div>
+          <form method="post" action="{{URL::to('/booking-ticket')}}">
+            @csrf
+            <div class="frame-group">
+                <select class="gi-gia-nh-wrapper" name="package" id="package" required>
+                    <div class="gi-gia-nh">
+                        @foreach ($detail_ticket as $de_ticket)
+                            <option value="{{ $de_ticket->ticket_name }}">{{ $de_ticket->ticket_name}}</option>
+                        @endforeach
+                    </div>
+                </select>
+                <img class="frame-icon" alt="" src="{{ asset('frontend/img/frame.svg') }}" />
+                <input class="ngy-s-dng-wrapper" type="date" name="date" id="date" required placeholder="yyyy-mm-dd" min="{{ date('Y-m-d') }}">
+                <input class="h-v-tn-wrapper" type="text" name="fullname" id="fullname" required placeholder="Họ tên">
+                <input class="s-in-thoi-wrapper" type="tel" name="phone" id="phone" pattern="[0-9]{10,11}" required placeholder="Số điện thoại">
+                <input class="a-ch-email-wrapper" type="email" name="email" id="email" required placeholder="Email">
+                <img class="frame-icon1" alt="" src="{{ asset('frontend/img/frame1.svg') }}" id="frame1" />
+                <input class="s-lng-v-wrapper" type="number" name="number" id="number" min="1" max="10" required placeholder="Số lượng vé">
             </div>
-            <div class="ngy-s-dng-wrapper">
-              <div class="gi-gia-nh">Ngày sử dụng</div>
-            </div>
-            <div class="h-v-tn-wrapper">
-              <div class="h-v-tn">Họ và tên</div>
-            </div>
-            <div class="s-in-thoi-wrapper">
-              <div class="h-v-tn">Số điện thoại</div>
-            </div>
-            <div class="a-ch-email-wrapper">
-              <div class="h-v-tn">Địa chỉ email</div>
-            </div>
-            <img class="frame-icon" alt="" src="{{asset('frontend/img/frame.svg')}}" />
+            <button type="submit" id="group2">
+                <div class="frame2">
+                    <img class="group-icon2" alt="" src="{{ asset('frontend/img/group2.svg') }}" />
+                    <div class="t-v">Đặt vé</div>
+                </div>
+            </button>
+        </form>
 
-            <img
-              class="frame-icon1"
-              alt=""
-              src="{{asset('frontend/img/frame1.svg')}}"
-              id="frame1"
-            />
 
-            <div class="s-lng-v-wrapper">
-              <div class="h-v-tn">Số lượng vé</div>
-            </div>
-          </div>
-          <div class="frame2">
-            <img
-              class="group-icon2"
-              alt=""
-              src="{{asset('frontend/img/group2.svg')}}"
-              id="group2"
-            />
-
-            <div class="t-v">Đặt vé</div>
-          </div>
           <div class="lorem-ipsum-dolor-container">
             <p class="lorem-ipsum-dolor">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.

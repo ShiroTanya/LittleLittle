@@ -69,10 +69,13 @@
 .gi-lin-h-container1 {
   position: absolute;
   top: 7.35%;
-  left: 29.62%;
+  left: 35%;
   font-weight: 400;
+  font-size: 30px;
+  color:white;
 
   font-family: 'Sigmar', cursive;
+  cursor: pointer;
 }
 .frame12 {
   position: absolute;
@@ -80,8 +83,8 @@
   width: 38.74%;
   top: 79.1%;
   right: 30.63%;
+  left:15%;
   bottom: 10.37%;
-  left: 30.63%;
   box-shadow: none;
   overflow: hidden;
 }

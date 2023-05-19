@@ -22,43 +22,42 @@
       <div class="lin-h">Liên hệ</div>
     </div>
     <div class="frame11">
-      <div class="group">
-        <img class="vector-icon9" alt="" src="{{ asset('frontend/img/vector9.svg')}}" />
+      <form action="{{URL::to('/send-contact')}}" method="POST">
+        @csrf
 
-        <img class="vector-icon10" alt="" src="{{ asset('frontend/img/vector10.svg')}}" />
+        <img class="vector-icon12" alt="" src="{{ asset('frontend/img/vector12.svg') }}" />
+        <div class="group">
+            <img class="vector-icon9" alt="" src="{{ asset('frontend/img/vector9.svg') }}" />
 
-        <img class="vector-icon11" alt="" src="{{ asset('frontend/img/vector11.svg')}}" />
+            <img class="vector-icon10" alt="" src="{{ asset('frontend/img/vector10.svg') }}" />
 
-        <div class="frame12" id="frameContainer1">
-          <img class="group-icon25" alt="" src="{{ asset('frontend/img/group2.svg')}}" />
-
-          <div class="gi-lin-h-container1">
-            Gửi liên hệ
-          </div>
+            <img class="vector-icon11" alt="" src="{{ asset('frontend/img/vector11.svg') }}" />
         </div>
-        <img class="vector-icon12" alt="" src="{{ asset('frontend/img/vector12.svg')}}" />
-      </div>
-      <div class="li-nhn-wrapper">
-        <div class="li-nhn">Lời nhắn</div>
-      </div>
-      <div class="frame-parent16">
-        <div class="frame-parent17">
-          <div class="tn-wrapper">
-            <div class="tn">Tên</div>
-          </div>
-          <div class="tn-wrapper">
-            <div class="tn">Số điện thoại</div>
-          </div>
+
+        <textarea class="li-nhn-wrapper" id="message_contact" name="contact_msg" rows="5" placeholder="Lời nhắn"style="border:none;font-size:16px" ></textarea>
+
+        <div class="frame-parent16">
+            <div class="frame-parent17">
+                <input type="text" class="tn-wrapper" id="name_contact" name="contact_name" placeholder="Tên" style="border:none;" >
+                <input type="text" class="tn-wrapper" id="phone_contact" name="contact_phone" placeholder="Số điện thoại"style="border:none;" >
+            </div>
+            <div class="frame-parent17">
+                <input type="email" class="email-wrapper" id="email_contact" name="contact_email" placeholder="Email"style="border:none;" >
+                <input type="text" class="a-ch-wrapper" id="address_contact" name="contact_address" placeholder="Địa chỉ"style="border:none;" >
+            </div>
         </div>
-        <div class="frame-parent17">
-          <div class="email-wrapper">
-            <div class="tn">Email</div>
-          </div>
-          <div class="a-ch-wrapper">
-            <div class="a-ch">Địa chỉ</div>
-          </div>
-        </div>
-      </div>
+
+        <button type="submit">
+            <div class="frame12" id="frameContainer1">
+                <img class="group-icon25" alt="" src="{{ asset('frontend/img/group2.svg') }}" />
+
+                <div class="gi-lin-h-container1">
+                    <span class="span2">Gửi liên hệ
+                </div>
+            </div>
+        </button>
+    </form>
+    
       <div class="lorem-ipsum-dolor5">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
         ac mollis justo. Etiam volutpat tellus quis risus volutpat, ut posuere
@@ -137,6 +136,7 @@
       <img class="x-icon" alt="" src="{{ asset('frontend/img/x.svg')}}" />
     </div>
   </div>
+
 
   <script>
     var frameContainer1 = document.getElementById("frameContainer1");
