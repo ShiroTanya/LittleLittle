@@ -99,28 +99,28 @@
     </div>
     <img class="alex-ar-lay-do-shadow-1" alt="" src="{{ asset('frontend/img/alex-ar-lay-do-shadow-1@2x.png')}}" />
 
-    <div class="navigation5">
-      <img class="navigation-child3" alt="" src="{{ asset('frontend/img/vector-2.svg')}}" />
+    <div class="navigation2">
+      <img class="navigation-inner" alt="" src="{{ asset('frontend/img/vector-2.svg')}}" />
 
-      <div class="frame-parent19">
-        <div class="tags-parent3">
-          <div class="tags15" id="tagsContainer">
-            <b class="sample-text15">Trang chủ</b>
+      <div class="frame-parent11">
+        <div class="tags-container">
+          <div class="tags6" id="tagsContainer">
+            <b class="s-kin-13">Trang chủ</b>
           </div>
-          <div class="tags15" id="tagsContainer1">
-            <b class="sample-text15">Sự kiện</b>
+          <div class="tags6" id="tagsContainer1">
+            <b class="s-kin-13">Sự kiện</b>
           </div>
-          <div class="tags17">
-            <b class="sample-text15">Liên hệ</b>
+          <div class="tags7" id="tagsContainer2">
+            <b class="s-kin-13">Liên hệ</b>
           </div>
         </div>
-        <div class="group-parent11">
-          <img class="group-icon29" alt="" src="{{ asset('frontend/img/group4.svg')}}" />
+        <div class="group-parent6">
+          <img class="group-icon14" alt="" src="{{ asset('frontend/img/group4.svg')}}" />
 
-          <b class="sample-text15">0123456789</b>
+          <b class="s-kin-13">0123456789</b>
         </div>
       </div>
-      <img class="little-little-logo-ngang-15" alt=""
+      <img class="little-little-logo-ngang-12" alt=""
         src="{{ asset('frontend/img/little--little-logo-ngang-1@2x.png')}}" />
     </div>
   </div>

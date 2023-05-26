@@ -17,5 +17,4 @@ class TicketController extends Controller
         $detail_ticket = DB::table('tbl_ticket')->where('ticket_status', 1)->get();
         return view('home')->with('detail_ticket', $detail_ticket);
     }
-    
 }

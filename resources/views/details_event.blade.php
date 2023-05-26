@@ -81,29 +81,29 @@
 
     <img class="frame-icon7" alt="" src="{{ asset ('frontend/img/frame6.svg') }}" />
 
-    <div class="navigation1">
-      <img class="navigation-item" alt="" src="{{ asset ('frontend/img/vector-2.svg') }}" />
+    <div class="navigation2">
+      <img class="navigation-inner" alt="" src="{{ asset('frontend/img/vector-2.svg')}}" />
 
-      <div class="frame-parent6">
-        <div class="tags-group">
-          <div class="tags3" id="tagsContainer">
-            <b class="sample-text3">Trang chủ</b>
+      <div class="frame-parent11">
+        <div class="tags-container">
+          <div class="tags6" id="tagsContainer">
+            <b class="s-kin-13">Trang chủ</b>
           </div>
-          <div class="tags4">
-            <b class="sample-text3">Sự kiện</b>
+          <div class="tags7" id="tagsContainer1">
+            <b class="s-kin-13">Sự kiện</b>
           </div>
-          <div class="tags3" id="tagsContainer2">
-            <b class="sample-text3">Liên hệ</b>
+          <div class="tags6" id="tagsContainer2">
+            <b class="s-kin-13">Liên hệ</b>
           </div>
         </div>
-        <div class="group-parent1">
-          <img class="group-icon8" alt="" src="{{ asset ('frontend/img/group4.svg') }}" />
+        <div class="group-parent6">
+          <img class="group-icon14" alt="" src="{{ asset('frontend/img/group4.svg')}}" />
 
-          <b class="sample-text3">0123456789</b>
+          <b class="s-kin-13">0123456789</b>
         </div>
       </div>
-      <img class="little-little-logo-ngang-11" alt=""
-        src="{{ asset ('frontend/img/little--little-logo-ngang-1@2x.png') }}" />
+      <img class="little-little-logo-ngang-12" alt=""
+        src="{{ asset('frontend/img/little--little-logo-ngang-1@2x.png')}}" />
     </div>
   </div>
 

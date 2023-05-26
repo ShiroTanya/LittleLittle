@@ -70,23 +70,23 @@
 
           <img class="vector-icon" alt="" src="{{asset('frontend/img/vector.svg')}}" />
 
-          <form method="post" action="{{URL::to('/booking-ticket')}}">
+          <form method="post" action="{{URL::to('/order')}}">
             @csrf
             <div class="frame-group">
-                <select class="gi-gia-nh-wrapper" name="package" id="package" required>
+                <select style="border:hidden" class="gi-gia-nh-wrapper" name="ticket_id" id="package" required>
                     <div class="gi-gia-nh">
-                        @foreach ($detail_ticket as $de_ticket)
-                            <option value="{{ $de_ticket->ticket_name }}">{{ $de_ticket->ticket_name}}</option>
-                        @endforeach
+                      <option value="1">Gói gia đình</option>
+                      <option value="2">Gói cá nhân</option>
                     </div>
                 </select>
                 <img class="frame-icon" alt="" src="{{ asset('frontend/img/frame.svg') }}" />
-                <input class="ngy-s-dng-wrapper" type="date" name="date" id="date" required placeholder="yyyy-mm-dd" min="{{ date('Y-m-d') }}">
-                <input class="h-v-tn-wrapper" type="text" name="fullname" id="fullname" required placeholder="Họ tên">
-                <input class="s-in-thoi-wrapper" type="tel" name="phone" id="phone" pattern="[0-9]{10,11}" required placeholder="Số điện thoại">
-                <input class="a-ch-email-wrapper" type="email" name="email" id="email" required placeholder="Email">
+                <input style="border:hidden" class="ngy-s-dng-wrapper" type="date" name="order_date_use" id="date" required placeholder="yyyy-mm-dd" min="{{ date('Y-m-d') }}">
+                <input style="border:hidden" class="h-v-tn-wrapper" type="text" name="order_customer_name" id="fullname" required placeholder="Họ tên">
+                <input style="border:hidden" class="s-in-thoi-wrapper" type="tel" name="order_customer_phone" id="phone" pattern="[0-9]{10,11}" required placeholder="Số điện thoại">
+                <input style="border:hidden" class="a-ch-email-wrapper" type="email" name="order_customer_email" id="email" required placeholder="Email">
                 <img class="frame-icon1" alt="" src="{{ asset('frontend/img/frame1.svg') }}" id="frame1" />
-                <input class="s-lng-v-wrapper" type="number" name="number" id="number" min="1" max="10" required placeholder="Số lượng vé">
+                <input style="border:hidden" class="s-lng-v-wrapper" type="number" name="order_quantity" id="number" min="1" max="10" required placeholder="Số lượng vé">
+                
             </div>
             <button type="submit" id="group2">
                 <div class="frame2">

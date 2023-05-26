@@ -41,7 +41,7 @@
         <div class="s-kin-ni">Sự kiện nổi bật</div>
 
         <div class="s-kin-11">
-        @foreach($all_event as $key =>$event)
+        @foreach($all_event as $key =>$event) 
         <div class="s-kin-12">
         <img class="s-kin-1-child" alt="" src="{{$event->event_img}}" />
         <div class="group-parent2">

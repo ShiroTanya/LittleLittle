@@ -154,6 +154,11 @@
   box-shadow: var(--inner-shadow);
   height: 56px;
   overflow: hidden;
+
+  padding: var(--padding-xl) var(--padding-base);
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .gi-gia-nh-wrapper {
@@ -167,6 +172,11 @@
   top: 72px;
   left: 174px;
   width: 224px;
+
+  padding: var(--padding-xl) var(--padding-base);
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .h-v-tn {
