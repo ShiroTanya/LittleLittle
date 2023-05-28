@@ -85,10 +85,10 @@
                 <input style="border:hidden" class="s-in-thoi-wrapper" type="tel" name="order_customer_phone" id="phone" pattern="[0-9]{10,11}" required placeholder="Số điện thoại">
                 <input style="border:hidden" class="a-ch-email-wrapper" type="email" name="order_customer_email" id="email" required placeholder="Email">
                 <img class="frame-icon1" alt="" src="{{ asset('frontend/img/frame1.svg') }}" id="frame1" />
-                <input style="border:hidden" class="s-lng-v-wrapper" type="number" name="order_quantity" id="number" min="1" max="10" required placeholder="Số lượng vé">
+                <input style="border:hidden" class="s-lng-v-wrapper" type="number" name="order_quantity" id="number" min="1" required placeholder="Số lượng vé">
                 
             </div>
-            <button type="submit" id="group2">
+            <button type="submit" id="frame2">
                 <div class="frame2">
                     <img class="group-icon2" alt="" src="{{ asset('frontend/img/group2.svg') }}" />
                     <div class="t-v">Đặt vé</div>
@@ -279,13 +279,6 @@
               }
             };
           popup.addEventListener("click", onClick);
-        });
-      }
-      
-      var group2 = document.getElementById("group2");
-      if (group2) {
-        group2.addEventListener("click", function (e) {
-          window.location.href = "/checkout";
         });
       }
       

@@ -22,14 +22,11 @@
 
         <img class="group-icon20" alt="" src="{{ asset ('frontend/img/group12.svg')}}" />
 
-        <div class="frame9" id="frameContainer">
-          <img class="group-icon21" alt="" src="{{ asset ('frontend/img/group2.svg')}}" />
-
-          <div class="thanh-ton1">Thanh toán</div>
-        </div>
-
-
         
+
+        <form action="{{URL::to('/checkout-success')}}" method="POST">
+          @csrf
+
         <div class="s-tin-thanh-ton">
           <b class="s-tin-thanh">Số tiền thanh toán</b>
           <div class="vn-wrapper">
@@ -40,20 +37,20 @@
           <div class="s-tin-thanh-ton1">
             <b class="s-tin-thanh">Số thẻ</b>
             <div class="wrapper">
-              <input style="border: none" class="nguyen-thi-ngoc" type="text" name="" required placeholder="Số thẻ"  >
+              <input style="border: none" class="nguyen-thi-ngoc" type="text" name="payment_account_number" required placeholder="Số thẻ"  >
             </div>
           </div>
           <div class="s-tin-thanh-ton1">
             <b class="s-tin-thanh">Họ tên chủ thẻ</b>
             <div class="wrapper">
-              <input style="border:hidden" class="nguyen-thi-ngoc" type="text" name="" required placeholder="Họ và tên">
+              <input style="border:hidden" class="nguyen-thi-ngoc" type="text" name="payment_account_name" required placeholder="Họ và tên">
             </div>
           </div>
           <div class="s-tin-thanh-ton1">
             <b class="s-tin-thanh">Ngày hết hạn</b>
             <div class="frame-parent13">
               <div class="container">
-                <input style="border:hidden" class="nguyen-thi-ngoc" type="month" name="" required placeholder="Ngày hết hạn"  >
+                <input style="border:hidden" class="nguyen-thi-ngoc" type="month" name="payment_expired_date" required placeholder="Ngày hết hạn"  >
               </div>
               <img
                 class="frame-icon12"
@@ -66,10 +63,19 @@
           <div class="s-tin-thanh-ton4">
             <b class="s-tin-thanh">CVV/CVC</b>
             <div class="wrapper1">
-              <input style="border:hidden" class="nguyen-thi-ngoc" type="password" name="" required placeholder="CVC">
+              <input style="border:hidden; width: 75%" class="nguyen-thi-ngoc" type="password" name="payment_cvc" required placeholder="CVC">
             </div>
           </div>
         </div>
+
+        <button type="submit" class="frame9">
+          <img class="group-icon21" alt="" src="{{ asset ('frontend/img/group2.svg')}}" />
+          <div class="thanh-ton1">Thanh toán</div>
+        </button>
+
+      </form>
+
+
         <div class="s-lng-v1">
           <b class="s-tin-thanh">Số lượng vé</b>
           <div class="frame-parent14">
@@ -105,6 +111,9 @@
         </div>
         <img class="vector-icon8" alt="" src="{{ asset ('frontend/img/vector8.svg')}}" />
       </div>
+
+
+      
       <div class="thanh-ton2">Thanh toán</div>
       <div class="group-parent8">
         <img class="group-icon21" alt="" src="{{ asset ('frontend/img/group13.svg')}}" />
@@ -131,7 +140,7 @@
             <div class="tags6" id="tagsContainer1">
               <b class="s-kin-13">Sự kiện</b>
             </div>
-            <div class="tags7" id="tagsContainer2">
+            <div class="tags6" id="tagsContainer2">
               <b class="s-kin-13">Liên hệ</b>
             </div>
           </div>
