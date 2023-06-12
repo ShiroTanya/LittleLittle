@@ -11,7 +11,7 @@ use App\Http\Requests;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Redirect;
 use PDF;
-
+use Mail;
 
 class CheckoutController extends Controller
 {
@@ -185,5 +185,34 @@ class CheckoutController extends Controller
     return $output;
 }
 
+public function send_mail_customer(Request $request){
+        $show_order_details = Order::latest('order_id')->first();
+        $show_payment_details = Payment::latest('payment_id')->first();
+        $ticketId = $show_order_details->ticket_id;
+        $ticket = Ticket::find($ticketId);
 
+        $ticketCount = Order::latest()->value('order_quantity'); 
+        $totalAmount = $ticket->ticket_single_price * $show_order_details->order_quantity;
+    
+        $title_mail = "Đơn hàng của bạn";
+        $data['order_customer_email'][] = $show_order_details->order_customer_email;
+
+        $mail_array = array(
+        'payment_code' => $show_payment_details->payment_code,
+        'ticket_name' => $ticket->ticket_name,
+        'order_customer_name' => $show_order_details->order_customer_name,
+        'order_customer_phone' => $show_order_details->order_customer_phone,
+        'order_customer_email' => $show_order_details->order_customer_email,
+        'order_date_use' => $show_order_details->order_date_use,
+        'order_quantity' => $show_payment_details->order_quantity,
+        'totalAmount' => $totalAmount,
+    );
+
+    Mail::send('send_mail', ['mail_array'=>$mail_array, 'totalAmount' =>$totalAmount],
+    function ($message) use ($title_mail, $data) {
+        $message->to($data['order_customer_email'])->subject($title_mail); //send this mail with subj
+        $message->from($data['order_customer_email'],$title_mail); //send from this email
+    });
+    return Redirect::to('/home');
+}
 }

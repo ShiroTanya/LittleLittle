@@ -72,11 +72,14 @@
           <div class="xem-chi-tit-btn4">
             <img class="group-icon16" alt="" src="{{ asset ('frontend/img/group10.svg') }}" />
 
-            <div class="ti-v">
-              <span class="ti-v-txt-container"
-                >Gửi email
-              </span>
-            </div>
+            <a style="color:white" target="_blank" href="{{route('send_mail_customer')}}"">
+              <div class="ti-v">
+                <span class="ti-v-txt-container"
+                  >Gửi mail
+                </span>
+              </div>
+            </a>
+
           </div>
         </div>
         <img
